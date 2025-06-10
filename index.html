@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>راهنمای کامل آزمون تافل هوم ادیشن (TOEFL Home Edition)</title>
+    
+    <!-- Google Fonts: Vazirmatn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- General Styles --- */
+        :root {
+            --primary-color: #007BFF;
+            --secondary-color: #0056b3;
+            --dark-color: #343a40;
+            --light-color: #f8f9fa;
+            --white-color: #ffffff;
+            --text-color: #495057;
+            --border-color: #dee2e6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            line-height: 1.8;
+            background-color: var(--white-color);
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1, h2, h3 {
+            color: var(--dark-color);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+        
+        section:nth-child(even) {
+            background-color: var(--light-color);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* --- Header & Navigation --- */
+        .main-header {
+            background-color: var(--white-color);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        .logo i {
+            margin-left: 8px;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .main-nav a {
+            color: var(--dark-color);
+            text-decoration: none;
+            padding: 10px 15px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .main-nav a:hover,
+        .main-nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background: linear-gradient(rgba(0, 123, 255, 0.8), rgba(0, 86, 179, 0.8)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            height: 90vh;
+            color: var(--white-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--white-color);
+        }
+
+        .hero-content p {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- Cards --- */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .card {
+            background: var(--white-color);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .card i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        /* --- Test Structure Section --- */
+        #structure .card {
+            text-align: right;
+        }
+        
+        #structure .card i {
+            float: right;
+            margin-left: 20px;
+        }
+
+        #structure .card h3 {
+            color: var(--primary-color);
+        }
+        
+        #structure ul {
+            list-style: none;
+            padding-right: 0;
+        }
+        #structure li {
+            padding-right: 25px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        #structure li::before {
+            content: '\f00c'; /* check icon */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: #28a745;
+            position: absolute;
+            right: 0;
+            top: 2px;
+        }
+
+        /* --- Registration Steps --- */
+        .steps {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .step {
+            display: flex;
+            align-items: center;
+            background: var(--white-color);
+            padding: 20px;
+            border-radius: 8px;
+            border-right: 5px solid var(--primary-color);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .step-number {
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-left: 20px;
+        }
+        .step-content h3 {
+            margin-bottom: 5px;
+        }
+
+        /* --- FAQ Section --- */
+        .faq-item {
+            background: var(--white-color);
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+        .faq-item summary {
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 20px;
+            cursor: pointer;
+            list-style: none;
+            position: relative;
+            color: var(--dark-color);
+        }
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+        .faq-item summary::after {
+            content: '\f078'; /* chevron-down */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 20px;
+            transition: transform 0.3s ease;
+        }
+        .faq-item[open] summary::after {
+            transform: rotate(180deg);
+        }
+        .faq-content {
+            padding: 0 20px 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* --- Footer --- */
+        .main-footer {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            padding: 40px 0;
+            text-align: center;
+        }
+        .main-footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        .footer-socials {
+            margin-bottom: 20px;
+        }
+        .footer-socials a {
+            color: var(--white-color);
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        .footer-socials a:hover {
+            color: var(--primary-color);
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            .main-header .container {
+                flex-direction: column;
+            }
+            .main-nav ul {
+                flex-direction: column;
+                text-align: center;
+                width: 100%;
+                margin-top: 15px;
+            }
+            .main-nav ul li {
+                margin-bottom: 10px;
+            }
+            
+            .hero {
+                height: auto;
+                padding: 100px 20px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <a href="#home" class="logo"><i class="fa-solid fa-house-laptop"></i> تافل هوم ادیشن</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#about">آزمون چیست؟</a></li>
+                    <li><a href="#structure">ساختار آزمون</a></li>
+                    <li><a href="#requirements">پیش‌نیازها</a></li>
+                    <li><a href="#register">ثبت‌نام</a></li>
+                    <li><a href="#price">هزینه</a></li>
+                    <li><a href="#faq">سوالات متداول</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>آزمون تافل در خانه شما (TOEFL iBT Home Edition)</h1>
+                <p>راهنمای جامع صفر تا صد برای موفقیت در آزمون تافل هوم ادیشن. همه چیز، از ثبت‌نام تا روز آزمون، در یک مکان.</p>
+                <a href="#register" class="btn">شروع فرآیند ثبت‌نام</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <h2>تافل هوم ادیشن چیست؟</h2>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 50px;">
+                    آزمون تافل هوم ادیشن (TOEFL iBT Home Edition) همان آزمون معتبر تافل iBT است، اما با این تفاوت که شما می‌توانید آن را از راحتی و امنیت خانه خود و با استفاده از کامپیوتر شخصی‌تان انجام دهید. این آزمون از نظر محتوا، قالب، نحوه نمره‌دهی و اعتبار کاملاً با نسخه حضوری یکسان است و توسط هزاران دانشگاه در سراسر جهان پذیرفته می‌شود.
+                </p>
+                <div class="card-grid">
+                    <div class="card">
+                        <i class="fa-solid fa-house-user"></i>
+                        <h3>راحتی و آسایش</h3>
+                        <p>بدون نیاز به رفت‌وآمد به مراکز آزمون، در محیط آشنای خانه خود امتحان دهید.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h3>امنیت و سلامت</h3>
+                        <p>در شرایط همه‌گیری یا محدودیت‌های دیگر، گزینه‌ای امن و مطمئن برای شرکت در آزمون است.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <h3>انعطاف‌پذیری بالا</h3>
+                        <p>آزمون‌ها به صورت ۲۴ ساعته و در ۴ روز هفته در دسترس هستند و شما می‌توانید بهترین زمان را انتخاب کنید.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Test Structure Section -->
+        <section id="structure">
+            <div class="container">
+                <h2>ساختار و بخش‌های آزمون</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <i class="fa-solid fa-book-open-reader"></i>
+                        <h3>بخش خواندن (Reading)</h3>
+                        <p><strong>زمان:</strong> ۵۴ تا ۷۲ دقیقه</p>
+                        <p><strong>تعداد سوالات:</strong> ۳۰ تا ۴۰ سوال</p>
+                        <ul>
+                            <li>درک مطلب از ۳ تا ۴ متن آکادمیک</li>
+                            <li>پاسخ به سوالات چندگزینه‌ای و تحلیلی</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <i class="fa-solid fa-headphones-simple"></i>
+                        <h3>بخش شنیداری (Listening)</h3>
+                        <p><strong>زمان:</strong> ۴۱ تا ۵۷ دقیقه</p>
+                        <p><strong>تعداد سوالات:</strong> ۲۸ تا ۳۹ سوال</p>
+                        <ul>
+                            <li>شنیدن سخنرانی‌های دانشگاهی و مکالمات</li>
+                            <li>پاسخ به سوالات درک مطلب شنیداری</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <i class="fa-solid fa-microphone-lines"></i>
+                        <h3>بخش گفتاری (Speaking)</h3>
+                        <p><strong>زمان:</strong> ۱۷ دقیقه</p>
+                        <p><strong>تعداد تسک‌ها:</strong> ۴ تسک</p>
+                        <ul>
+                            <li>۱ تسک مستقل (Independent)</li>
+                            <li>۳ تسک ترکیبی (Integrated)</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <i class="fa-solid fa-keyboard"></i>
+                        <h3>بخش نوشتاری (Writing)</h3>
+                        <p><strong>زمان:</strong> ۵۰ دقیقه</p>
+                        <p><strong>تعداد تسک‌ها:</strong> ۲ تسک</p>
+                        <ul>
+                            <li>۱ تسک ترکیبی (Integrated)</li>
+                            <li>۱ تسک مستقل (Independent)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Requirements Section -->
+        <section id="requirements">
+            <div class="container">
+                <h2>پیش‌نیازهای شرکت در آزمون</h2>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 50px;">
+                    برای شرکت در آزمون هوم ادیشن، باید تجهیزات و محیط مناسبی را فراهم کنید. عدم رعایت این موارد می‌تواند منجر به لغو آزمون شما شود.
+                </p>
+                <div class="card-grid">
+                    <div class="card">
+                        <i class="fa-solid fa-computer"></i>
+                        <h3>کامپیوتر و سیستم‌عامل</h3>
+                        <p>کامپیوتر دسکتاپ یا لپ‌تاپ (تبلت و موبایل مجاز نیست). سیستم‌عامل ویندوز (نسخه ۱۰ به بالا) یا macOS (نسخه 10.13 به بالا).</p>
+                    </div>
+                    <div class="card">
+                        <i class="fa-solid fa-wifi"></i>
+                        <h3>اینترنت پایدار</h3>
+                        <p>اتصال اینترنت پایدار و پرسرعت برای جلوگیری از قطعی در طول آزمون ضروری است.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fa-solid fa-headset"></i>
+                        <h3>تجهیزات صوتی</h3>
+                        <p>میکروفون و اسپیکر داخلی یا خارجی (استفاده از هدست مجاز نیست).</p>
+                    </div>
+                    <div class="card">
+                        <i class="fa-solid fa-video"></i>
+                        <h3>وب‌کم</h3>
+                        <p>وب‌کم داخلی یا خارجی با قابلیت چرخش ۳۶۰ درجه برای نمایش کامل اتاق به مراقب آزمون.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fa-solid fa-person-shelter"></i>
+                        <h3>محیط آزمون</h3>
+                        <p>اتاق باید خصوصی و ساکت باشد. میز کار شما باید کاملاً خالی باشد و هیچ‌کس نباید در طول آزمون وارد اتاق شود.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fa-solid fa-file-pen"></i>
+                        <h3>ابزار یادداشت‌برداری</h3>
+                        <p>استفاده از کاغذ مجاز نیست. باید از یک وایت‌بورد کوچک یا یک برگه کاغذ که داخل تلق شفاف قرار گرفته و ماژیک وایت‌بورد استفاده کنید.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration Section -->
+        <section id="register">
+            <div class="container">
+                <h2>مراحل ثبت‌نام در آزمون</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">۱</div>
+                        <div class="step-content">
+                            <h3>ایجاد حساب کاربری در سایت ETS</h3>
+                            <p>به وب‌سایت رسمی ETS مراجعه کرده و یک حساب کاربری برای خود بسازید. اطلاعات خود را دقیقاً مطابق با پاسپورت وارد کنید.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">۲</div>
+                        <div class="step-content">
+                            <h3>انتخاب آزمون تافل هوم ادیشن</h3>
+                            <p>در پنل کاربری خود، گزینه "Register for a Test" را انتخاب کرده و سپس "TOEFL iBT Home Edition" را برگزینید.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">۳</div>
+                        <div class="step-content">
+                            <h3>انتخاب تاریخ و زمان آزمون</h3>
+                            <p>تاریخ و ساعت مورد نظر خود را از میان زمان‌های موجود انتخاب کنید. زمان‌ها به وقت محلی شما نمایش داده می‌شوند.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">۴</div>
+                        <div class="step-content">
+                            <h3>پرداخت هزینه آزمون</h3>
+                            <p>هزینه آزمون را از طریق کارت‌های اعتباری بین‌المللی (مانند Visa یا MasterCard) پرداخت کنید.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">۵</div>
+                        <div class="step-content">
+                            <h3>دریافت ایمیل تاییدیه</h3>
+                            <p>پس از پرداخت موفق، ایمیلی از ETS دریافت خواهید کرد که حاوی لینک ورود به آزمون در روز امتحان است. این ایمیل را با دقت نگهداری کنید.</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="https://www.ets.org/toefl" target="_blank" class="btn">ورود به سایت رسمی ETS</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Price Section -->
+        <section id="price">
+            <div class="container" style="text-align: center;">
+                <h2>هزینه آزمون چقدر است؟</h2>
+                <div class="card" style="max-width: 600px; margin: 40px auto 0;">
+                    <i class="fa-solid fa-dollar-sign"></i>
+                    <h3>هزینه پایه آزمون</h3>
+                    <p>هزینه آزمون تافل هوم ادیشن بسته به کشور شما متغیر است. برای ایران، این هزینه معمولاً در حدود <strong>۲۴۵ دلار آمریکا</strong> است.</p>
+                    <p style="margin-top: 15px; font-size: 0.9rem;"><strong>نکته:</strong> همیشه آخرین قیمت را از وب‌سایت رسمی ETS بررسی کنید، زیرا ممکن است تغییر کند. هزینه‌های اضافی مانند ثبت‌نام دیرهنگام یا تغییر تاریخ آزمون نیز وجود دارد.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq">
+            <div class="container">
+                <h2>سوالات متداول</h2>
+                <div class="faq-container" style="max-width: 800px; margin: 50px auto 0;">
+                    <details class="faq-item">
+                        <summary>آیا مدرک تافل هوم ادیشن معتبر است؟</summary>
+                        <div class="faq-content">
+                            <p>بله، این مدرک از نظر اعتبار، محتوا و نمره‌دهی کاملاً با نسخه حضوری یکسان است و توسط دانشگاه‌ها و موسسات در سراسر جهان پذیرفته می‌شود. با این حال، همیشه بهتر است نیازمندی‌های دانشگاه مقصد خود را بررسی کنید.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>اگر در حین آزمون اینترنت قطع شود چه اتفاقی می‌افتد؟</summary>
+                        <div class="faq-content">
+                            <p>اگر قطعی کوتاه باشد، می‌توانید مجدداً به آزمون متصل شوید. اگر مشکل ادامه پیدا کند، بلافاصله از طریق چت با مراقب آزمون (ProctorU) تماس بگیرید. آن‌ها شما را راهنمایی خواهند کرد و در صورت لزوم، امکان برگزاری مجدد آزمون را فراهم می‌کنند.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>نتایج آزمون چه زمانی اعلام می‌شود؟</summary>
+                        <div class="faq-content">
+                            <p>نتایج غیررسمی بخش‌های Reading و Listening بلافاصله پس از اتمام آزمون نمایش داده می‌شود. نمرات رسمی معمولاً بین ۶ تا ۱۰ روز کاری پس از تاریخ آزمون در حساب کاربری ETS شما قابل مشاهده خواهد بود.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>آیا می‌توانم از هدفون یا هدست استفاده کنم؟</summary>
+                        <div class="faq-content">
+                            <p>خیر، استفاده از هرگونه هدفون یا هدست در آزمون تافل هوم ادیشن ممنوع است. شما باید از میکروفون و اسپیکر داخلی یا خارجی کامپیوتر خود استفاده کنید.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-socials">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>این صفحه یک راهنمای جامع و غیررسمی است. برای اطلاعات دقیق و به‌روز همیشه به <a href="https://www.ets.org/toefl" target="_blank">وب‌سایت رسمی ETS</a> مراجعه کنید.</p>
+            <p>طراحی و توسعه با ❤️ برای زبان‌آموزان</p>
+        </div>
+    </footer>
+
+</body>
+</html>
